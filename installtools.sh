@@ -1,11 +1,5 @@
 #!/bin/bash
 
-usage ()
-{
-  echo 'Usage : install -n <reponame> -e <hosteur backup user> -p <hosteur backup password> -'
-  exit
-}
-
 echo "Please type your Hosteur Backup Account"
 read hbuser
 
