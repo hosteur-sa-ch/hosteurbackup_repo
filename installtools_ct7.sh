@@ -35,10 +35,11 @@ cbb addBackupPlan -n $hbplan -a $hbsacc -f $hbsrcf -c yes -ea "AES_256" -ep $hbe
 read -p "Do you need to start the plan now? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ ! $REPLY =~ ^[Yy]$ ]]
-  cbb plan -r $hbuser
+  cbb plan -r $hbplan
 then
     exit 1
 fi
 
 echo "to stop plan use cbb plan -s $hbplan"
 cbb getPlanDetails -n $hbplan
+cbb plan $hbplan
