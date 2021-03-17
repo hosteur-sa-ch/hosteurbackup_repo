@@ -42,4 +42,4 @@ fi
 
 echo "to stop plan use cbb plan -s $hbplan"
 cbb getPlanDetails -n $hbplan
-cbb plan $hbplan
+cbb plan -l
