@@ -20,17 +20,17 @@ read hbsrcf
 echo "Please type your Encryption Key (Store Carrefully !!!!)"
 read hbenkey
 
-#yum install -y wget
+yum install -y wget
 
-#wget https://s3.amazonaws.com/cb_setups/MBS/E2485941-C2F6-41CC-ACE8-3B0BDC37B854/rh6_HOSTEURSA_HosteurBackup_v2.10.2.73_20200422200232.rpm
-#rpm --install rh6_HOSTEURSA_HosteurBackup_v2.10.2.73_20200422200232.rpm
+wget https://s3.amazonaws.com/cb_setups/MBS/E2485941-C2F6-41CC-ACE8-3B0BDC37B854/rh6_HOSTEURSA_HosteurBackup_v2.10.2.73_20200422200232.rpm
+rpm --install rh6_HOSTEURSA_HosteurBackup_v2.10.2.73_20200422200232.rpm
 
-#ln -s /opt/local/Hosteur\ Backup/bin/cbb /usr/bin/cbb
+ln -s /opt/local/Hosteur\ Backup/bin/cbb /usr/bin/cbb
 
-#cbb addAccount -e $hbuser -p $hbpasswd -ssl yes
-#cbb option -set bw -b 102400
+cbb addAccount -e $hbuser -p $hbpasswd -ssl yes
+cbb option -set bw -b 102400
 
-#cbb addBackupPlan -n $hbplan -a $hbsacc -f $hbsrcf -c yes -ea "AES_256" -ep $hbenkey -every week -at "08:00" -weekday "su"
+cbb addBackupPlan -n $hbplan -a $hbsacc -f $hbsrcf -c yes -ea "AES_256" -ep $hbenkey -every week -at "08:00" -weekday "su"
 
 read -p "Do you need to start the plan now? " -n 1 -r
 echo    # (optional) move to a new line
