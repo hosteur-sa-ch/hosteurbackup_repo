@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Installing Hosteur Backup for Veeam Repo : Debian release"
+
 echo "Please type your Hosteur Backup Account"
 read hbuser
 
@@ -18,7 +20,7 @@ read hbsrcf
 echo "Please type your Encryption Key (Store Carrefully !!!!)"
 read hbenkey
 
-yum install -y wget
+apt install wget
 
 wget https://s3.amazonaws.com/cb_setups/MBS/E2485941-C2F6-41CC-ACE8-3B0BDC37B854/rh6_HOSTEURSA_HosteurBackup_v2.10.2.73_20200422200232.rpm
 rpm --install rh6_HOSTEURSA_HosteurBackup_v2.10.2.73_20200422200232.rpm
